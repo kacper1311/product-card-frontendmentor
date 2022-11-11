@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+/* Colors */
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* Styling */
+
+.left img {
+    max-width: 100%;
+    display: inherit;
+}
+
+body {
+    font-size: 14px;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+    margin: 1.25rem;
+}
+
+.card {
+    background-color: var(--White);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    margin: 30px 30px;
+}
+
+.right {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right p {
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.right h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--Very-dark-blue);
+    font-size: 2.6rem;
+    line-height: 1em;
+}
+
+.right .perfume {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.right .text {
+    line-height: 1.6em;
+    font-size: 1.07rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.right button {
+    background-color: var(--Dark-cyan);
+    border: 0;
+    padding: 1rem;
+    color: var(--White);
+    width: 100%;
+    border-radius: 0.6rem;
+    font-weight: 700;
+    font-size: .950rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.right button:hover {
+    background-color: hsl(158, 36%, 27%);
+}
+
+.right button svg {
+    margin-right: 1rem;
+}
+
+.right .price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.right .price .lower {
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+.right .price .higher {
+    font-size: 1rem;
+}
+
+/* desctop responsive */
+
+@media only screen and (max-width: 740px) {
+   .right {
+    padding: 2rem;
+   }
+
+   .right .text {
+    font-size: 1rem;
+   }
+
+   .right h1 {
+        font-size: 2.4rem;
+    }
+
+    .right .perfume {
+        font-size: .9rem;
+    }
+}
+
+
+/* mobile responsive */
+
+@media only screen and (max-width: 684px){
+    
+    .card {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .left img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .right .text, .right h1, .right .perfume, .right .price {
+        padding-bottom: 1.2rem;
+    }
+
+    .right {
+        padding: 2.5rem;
+    }
+    
+    .right .text {
+    font-size: 1.1rem;
+    }
+    
+    .right h1 {
+        font-size: 2.9rem;
+    }
+    
+    .right .perfume {
+        font-size: 1.1rem;
+    }
+
+    .right .price .lower {
+        font-size: 2.6rem;
+    }
+
+    .right .price .higher {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 500) {
+    .left img {
+        max-height: 260px;
+    }
+
+    .right .text {
+        font-size: 1rem;
+        }
+        
+        .right h1 {
+            font-size: 1.8rem;
+        }
+        
+        .right .perfume {
+            font-size: 1rem;
+        }
+    
+        .right .price .lower {
+            font-size: 2.3rem;
+        }
+    
+        .right .price .higher {
+            font-size: 1.1rem;
+        }
+}
+
+@media only screen and (max-width: 430) {
+    .left img {
+        max-height: 250px;
+    }
+
+    .right .text {
+        font-size: 0.9rem;
+        }
+        
+        .right h1 {
+            font-size: 1rem;
+        }
+        
+        .right .perfume {
+            font-size: .9rem;
+        }
+    
+        .right .price .lower {
+            font-size: 2rem;
+        }
+    
+        .right .price .higher {
+            font-size: .95rem;
+        }
+}
+
+@media only screen and (max-width: 300px) {
+    .left img {
+        max-height: 200px;
+    }
+}
+
+/* footer (with my name) */
+
+.attribution { 
+    font-size: 16px; text-align: center; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
